@@ -1,3 +1,68 @@
-<p>
-  header works!
-</p>
+<header>
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #171a21;">
+    <!-- Container wrapper -->
+    <div class="container">
+      <!-- Navbar brand -->
+      <a class="navbar-brand me-2" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}" routerLink="">
+        <img src="assets/nav-logo.png" height="40" alt="" loading="lazy" />
+        <small class="brand-style">CS:GO PLATFORM</small>
+      </a>
+
+      <!-- Toggle button -->
+      <button class="navbar-toggler" type="button" (click)="buttonsNav.toggle()" aria-expanded="false"
+        aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarButtonsExample" mdbCollapse #buttonsNav="mdbCollapse">
+        <!-- Left links -->
+        <ul class="navbar-nav nav-style me-auto mb-2 mb-lg-0">
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link active" routerLink='community'>Community</a>
+          </li>
+          <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+            <a class="nav-link" routerLink='profile'>My profile</a>
+          </li>
+        </ul>
+        <!-- Left links -->
+
+        <div class="d-flex align-items-center">
+          <button type="button" class="btn btn-primary me-3">
+            Login
+          </button>
+        </div>
+
+        <div>
+          <ul class="navbar-nav align-items-center">
+            <li class="nav-item me-3 me-lg-0">
+              <a class="nav-link">
+                <i class="fas fa-envelope fa-lg"></i>
+                <span class="badge bg-danger badge-dot"></span>
+              </a>
+            </li>
+
+            <li mdbDropdown class="nav-item">
+              <a class="nav-link dropdown-toggle d-flex align-items-center" id="navbarDropdownMenuLink" role="button"
+                mdbDropdownToggle aria-expanded="false">
+                <img src="assets/player-icon.png" height="36" alt="" loading="lazy" />
+              </a>
+
+              <ul mdbDropdownMenu class="dropdown-menu dropdown-menu-dark" aria-labelledby="navbarDropdownMenuLink"
+                routerLinkActive="active" [routerLinkActiveOptions]="{exact:true}">
+                <li>
+                  <a class="dropdown-item" routerLink="preferences">Settings</a>
+                </li>
+                <li>
+                  <a class="dropdown-item" routerLink="logout">Logout</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+</header>

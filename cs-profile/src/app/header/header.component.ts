@@ -1,3 +1,4 @@
+import { AuthGuardService } from '../services/auth-guard/auth-guard.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   
-  constructor() { }
+  constructor(public authService: AuthGuardService) { }
 
   ngOnInit() {
   }
-
 }

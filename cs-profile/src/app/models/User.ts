@@ -7,4 +7,5 @@ export interface User {
     roles: string[];
     token: string;
     avatar: string;
+    steamId: number;
 }

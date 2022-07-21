@@ -1,3 +1,4 @@
+import { BestArtsComponent } from './best-arts/best-arts.component';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { SigninComponent } from './signin/signin.component';
 import { NgModule } from '@angular/core';
@@ -14,6 +15,7 @@ import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'signin', pathMatch: 'full', component: SigninComponent },
+  { path: 'best-arts', pathMatch: 'full', component: BestArtsComponent },
   { path: '**', component: NotFoundComponent }
 ]
 
@@ -30,7 +32,7 @@ export function playerFactory() {
     MdbCheckboxModule,
     MdbRippleModule
   ],
-  declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent],
+  declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, BestArtsComponent],
   exports: [BodyComponent]
 })
 export class BodyModule { }

@@ -27,12 +27,16 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [          
-              "src/assets"
+              "src/assets",
+              "src/app/body/best-arts/lightbox/images"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "src/app/body/best-arts/lightbox/css/lightbox.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/app/body/best-arts/lightbox/js/lightbox-plus-jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {

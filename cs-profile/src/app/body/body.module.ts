@@ -11,6 +11,7 @@ import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 import { FormsModule } from '@angular/forms';
 import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
+import { InfiniteScrollModule } from 'ngx-infinite-scroll';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
@@ -30,7 +31,8 @@ export function playerFactory() {
     LottieModule.forRoot({ player: playerFactory }),
     FormsModule,
     MdbCheckboxModule,
-    MdbRippleModule
+    MdbRippleModule,
+    InfiniteScrollModule
   ],
   declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, BestArtsComponent],
   exports: [BodyComponent]

@@ -27,8 +27,7 @@
             "tsConfig": "tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [          
-              "src/assets",
-              "src/app/body/best-arts/lightbox/images"
+              "src/assets"
             ],
             "styles": [
               "src/styles.scss",

@@ -1,7 +1,7 @@
-<div class="row d-flex justify-content-center mt-3">
-  <div *ngFor="let imageSrc of imagesSrc; let i = index" class="col-md-4 mb-3 bg-image hover-zoom">    
-    <a class="example-image-link" href="{{imageSrc}}"
-      data-lightbox="example-1">
+<div class="row d-flex justify-content-center mt-3" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()">
+  <div *ngFor="let imageSrc of imagesSrc; let i = index" class="col-md-4 mb-3 bg-image hover-zoom">
+    <a class="example-image-link" href="{{imageSrc}}" data-lightbox="example-1">
       <img src="{{imageSrc}}" class="w-100" alt="art" />
     </a>
   </div>

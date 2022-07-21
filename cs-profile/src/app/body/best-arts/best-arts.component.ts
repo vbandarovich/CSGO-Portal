@@ -7,7 +7,10 @@ import { ARTS } from '../../models/BestArtsPaths';
   styleUrls: ['./best-arts.component.scss']
 })
 export class BestArtsComponent implements OnInit {
-  imagesSrc = ARTS;
+  sum = 18;
+  imagesSrc = ARTS.slice(0, this.sum);
+  throttle = 300;
+  scrollDistance = 1;
 
   constructor() {
   }
@@ -15,4 +18,13 @@ export class BestArtsComponent implements OnInit {
   ngOnInit() {
   }
 
+  onScrollDown() {
+    const start = this.sum;
+    this.sum += 12;
+    this.addItems(start, this.sum);
+  }
+
+  addItems(startIndex: number, endIndex: number) { 
+    this.imagesSrc.push(...ARTS.slice(startIndex, endIndex));
+  }
 }

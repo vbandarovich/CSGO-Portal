@@ -1,0 +1,27 @@
+<div class="row d-flex justify-content-center mt-5">
+  <div class="col-md-6 text-center">
+    <div class="alert alert-warning" [class.invisible]="!isEmptyError" role="alert">Fields can't be empty!</div>
+    <div class="alert alert-warning" [class.invisible]="!isNotValidError" role="alert">Email must be valid.
+      Password must contain between 8 to 15 characters which must contain at least one numeric digit, one special
+      character and one capital letter.
+    </div>
+    <div class="text-center p-5 ">
+      <p class="h4 mb-4 text-white">Sign in</p>
+      <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="email">
+      <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"
+        [(ngModel)]="password">
+      <div class="d-flex justify-content-around">
+        <div>
+          <a style="color: #FFA900;" routerLink="">Forgot password?</a>
+        </div>
+      </div>
+      <a mdbRipple type="button" class="btn m-3 text-white" style="background-color: #1A237E;"
+        role="button" (click)="signIn()">
+        Sign In
+      </a>
+      <p class="text-white">Not a member?
+        <a style="color: #39C0ED;" routerLink="/signup">Register</a>
+      </p>
+    </div>
+  </div>
+</div>

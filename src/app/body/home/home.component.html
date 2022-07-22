@@ -1,46 +1,21 @@
-<div class="row mt-2 justify-content-center">
+<div class="row mt-2 justify-content-center" infinite-scroll [infiniteScrollDistance]="scrollDistance"
+  [infiniteScrollThrottle]="throttle" (scrolled)="onScrollDown()">
   <div class="col-md-8">
     <h1><span class="badge gradient-custom">Last updates from community</span></h1>
 
-    <div class="card mb-3">
-      <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="card-img-top" alt="Wild Landscape" />
+    <div *ngFor="let item of news" class="card mb-3">
+      <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="card-img-top shadow-2-strong"
+        alt="Wild Landscape" />
       <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="card-title">News title # {{item}}</h5>
         <p class="card-text">
           This is a wider card with supporting text below as a natural lead-in to additional
           content. This content is a little bit longer.
         </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-      </div>
-    </div>
-
-    <div class="card mb-3">
-      <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="card-img-top" alt="Wild Landscape" />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in to additional
-          content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
-      </div>
-    </div>
-
-    <div class="card mb-3">
-      <img src="https://mdbcdn.b-cdn.net/img/new/slides/041.webp" class="card-img-top" alt="Wild Landscape" />
-      <div class="card-body">
-        <h5 class="card-title">Card title</h5>
-        <p class="card-text">
-          This is a wider card with supporting text below as a natural lead-in to additional
-          content. This content is a little bit longer.
-        </p>
-        <p class="card-text">
-          <small class="text-muted">Last updated 3 mins ago</small>
-        </p>
+        <div class="d-flex justify-content-between card-text">
+          <small class="text-muted mt-2">Last updated 3 mins ago</small>
+          <a mdbRipple type="button" class="btn btn-info" routerLink='/news/:id' role="button">Read more</a>
+        </div>
       </div>
     </div>
   </div>

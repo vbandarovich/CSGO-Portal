@@ -7,9 +7,19 @@
     </div>
     <div class="text-center p-5 ">
       <p class="h4 mb-4 text-white">Sign in</p>
-      <input type="email" id="defaultLoginFormEmail" class="form-control mb-4" placeholder="E-mail" [(ngModel)]="email">
-      <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Password"
-        [(ngModel)]="password">
+
+      <mdb-form-control class="form-white">
+        <input mdbInput type="email" id="formEmail" class="form-control mb-4" placeholder="E-mail"
+          [(ngModel)]="email" />
+        <label mdbLabel class="form-label" for="formEmail">E-mail</label>
+      </mdb-form-control>
+
+      <mdb-form-control class="form-white">
+        <input mdbInput type="password" id="formPassword" class="form-control mb-4" placeholder="Password"
+          [(ngModel)]="password" />
+        <label mdbLabel class="form-label" for="formPassword">Password</label>
+      </mdb-form-control>
+      
       <div class="d-flex justify-content-around">
         <div>
           <a style="color: #FFA900;" routerLink="">Forgot password?</a>

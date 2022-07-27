@@ -1,0 +1,48 @@
+<div class="row d-flex justify-content-center mt-5">
+  <div class="col-md-6 text-center">
+    <div class="alert alert-warning" [class.invisible]="!isEmptyError" role="alert">
+      Fields can't be empty!
+    </div>
+    <div class="alert alert-warning" [class.invisible]="!isNotValidError" role="alert">
+      Email must be valid. Password must contain between 8 to 15 characters
+      which must contain at least one numeric digit, one special character and
+      one capital letter.
+    </div>
+    <div class="text-center p-5">
+      <p class="h4 mb-4 text-white">Sign up</p>
+
+      <mdb-form-control class="form-white">
+        <input mdbInput type="email" id="formEmail" class="form-control mb-4" placeholder="E-mail"
+          [(ngModel)]="email" />
+        <label mdbLabel class="form-label" for="formEmail">E-mail</label>
+      </mdb-form-control>
+
+      <mdb-form-control class="form-white">
+        <input mdbInput type="tel" id="formPhoneNumber" class="form-control mb-4" placeholder="Phone number"
+          [(ngModel)]="phoneNumber" />
+        <label mdbLabel class="form-label" for="formPhoneNumber">Phone number</label>
+      </mdb-form-control>
+
+      <mdb-form-control class="form-white">
+        <input mdbInput type="password" id="formPassword" class="form-control mb-4" placeholder="Password"
+          [(ngModel)]="password" />
+        <label mdbLabel class="form-label" for="formPassword">Password</label>
+      </mdb-form-control>
+
+      <mdb-form-control class="form-white">
+        <input mdbInput type="password" id="formPasswordConfirm" class="form-control mb-4"
+          placeholder="Confirm password" />
+        <label mdbLabel class="form-label" for="formPasswordConfirm">Confirm password</label>
+      </mdb-form-control>
+
+      <a mdbRipple type="button" class="btn m-3 text-white" style="background-color: #1a237e" role="button"
+        (click)="signUp()">
+        Sign Up
+      </a>
+      <p class="text-white">
+        Are you a member?
+        <a style="color: #39c0ed" routerLink="/signin">Login</a>
+      </p>
+    </div>
+  </div>
+</div>

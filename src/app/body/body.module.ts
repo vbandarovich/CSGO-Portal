@@ -1,3 +1,4 @@
+import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { BestArtsComponent } from './best-arts/best-arts.component';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
@@ -19,6 +20,8 @@ const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'signin', pathMatch: 'full', component: SigninComponent },
   { path: 'signup', pathMatch: 'full', component: SignupComponent },
+  { path: 'profile', pathMatch: 'full', redirectTo: '' },
+  { path: 'profile/:id', pathMatch: 'full', component: ProfileComponent },
   { path: 'best-arts', pathMatch: 'full', component: BestArtsComponent },
   { path: '**', component: NotFoundComponent }
 ]
@@ -38,7 +41,7 @@ export function playerFactory() {
     InfiniteScrollModule,
     MdbFormsModule
   ],
-  declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, SignupComponent, BestArtsComponent],
+  declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, SignupComponent, BestArtsComponent, ProfileComponent],
   exports: [BodyComponent]
 })
 export class BodyModule { }

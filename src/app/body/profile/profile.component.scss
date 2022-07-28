@@ -1,0 +1,19 @@
+.bg-gradient {
+      background:
+            radial-gradient(farthest-side at top right,
+                  rgba(51, 54, 253, 0.233),
+                  transparent 500px),
+            radial-gradient(farthest-corner at top left,
+                  rgba(12, 85, 241, 0.37),
+                  transparent 600px),
+            radial-gradient(farthest-corner at bottom right,
+                  rgba(51, 54, 253, 0),
+                  transparent 500px),
+            radial-gradient(farthest-corner at bottom left,
+                  rgba(12, 85, 241, 0.13),
+                  transparent 600px);
+      background-color: rgba(10, 14, 32, 0.93);
+      margin-top: 0px;
+      overflow: hidden;
+      padding-top: 16px;
+}

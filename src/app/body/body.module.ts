@@ -15,13 +15,15 @@ import { FormsModule } from '@angular/forms';
 import { MdbFormsModule } from 'mdb-angular-ui-kit/forms';
 import { MdbRippleModule } from 'mdb-angular-ui-kit/ripple';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { AuthGuardService } from '../services/auth-guard/auth-guard.service';
+import { HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   { path: '', pathMatch: 'full', component: HomeComponent },
   { path: 'signin', pathMatch: 'full', component: SigninComponent },
   { path: 'signup', pathMatch: 'full', component: SignupComponent },
   { path: 'profile', pathMatch: 'full', redirectTo: '' },
-  { path: 'profile/:id', pathMatch: 'full', component: ProfileComponent },
+  { path: 'profile/:id', pathMatch: 'full', component: ProfileComponent, canActivate: [AuthGuardService] },
   { path: 'best-arts', pathMatch: 'full', component: BestArtsComponent },
   { path: '**', component: NotFoundComponent }
 ]
@@ -39,7 +41,8 @@ export function playerFactory() {
     MdbCheckboxModule,
     MdbRippleModule,
     InfiniteScrollModule,
-    MdbFormsModule
+    MdbFormsModule,
+    HttpClientModule
   ],
   declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, SignupComponent, BestArtsComponent, ProfileComponent],
   exports: [BodyComponent]

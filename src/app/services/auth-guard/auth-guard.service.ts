@@ -1,6 +1,8 @@
+import { environment } from './../../../environments/environment.prod';
 import { User } from '../../models/User';
 import { Injectable } from '@angular/core';
 import { CanActivate, Router } from '@angular/router';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
@@ -11,8 +13,8 @@ export class AuthGuardService implements CanActivate {
   public isConfirmEmailSend = false;
   private avatar: string = '';
 
-  constructor(private router: Router) {
-    this.user = JSON.parse(localStorage.getItem('user')!);
+  constructor(private router: Router, private http: HttpClient) {
+    this.user = JSON.parse(localStorage.getItem('user')!); 
     if (this.user) {
       this.isAuthorized = true;
     }
@@ -32,9 +34,9 @@ export class AuthGuardService implements CanActivate {
         email: email,
         password: password
       }
-      //let result = await this.http.post<User>('https://localhost:44348/api/login', model, { withCredentials: true }).toPromise();
-      //this.user = result;
-      //localStorage.setItem('user', JSON.stringify(this.user));
+      //this.user = await this.http.post<User>(`${environment.apiUrl}/users`, model, { withCredentials: true }).toPromise() ?? null;     
+      this.user = await this.http.get<User>(`${environment.apiUrl}/user`).toPromise() ?? null;     
+      localStorage.setItem('user', JSON.stringify(this.user));
       this.isAuthorized = true;
       this.router.navigate(['/']);
       return false;
@@ -44,7 +46,7 @@ export class AuthGuardService implements CanActivate {
   }
 
   public logout() {
-    //localStorage.removeItem('user');
+    localStorage.removeItem('user');
     this.isAuthorized = false;
     this.user = null;
     this.router.navigate(['/']);

@@ -23,7 +23,7 @@
               [routerLinkActiveOptions]="{exact:true}">Community</a>
           </li>
           <li class="nav-item" [hidden]="!authService.isAuthorized">
-            <a class="nav-link" routerLink='/profile/{{userId}}' routerLinkActive="active"
+            <a class="nav-link" routerLink='/profile/{{authService.user?.id}}' routerLinkActive="active"
               [routerLinkActiveOptions]="{exact:true}">My profile</a>
           </li>
           <li class="nav-item">

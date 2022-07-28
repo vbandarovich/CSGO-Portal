@@ -1,0 +1,15 @@
+{
+    "user": {
+        "id": "1",
+        "email": "user@gmail.com",
+        "isEmailConfirmed": false,
+        "userName": "user",
+        "phoneNumber": "+375435345",
+        "roles": [
+            "user"
+        ],
+        "token": "dfgdft345436dfh54b54",
+        "avatar": "",
+        "steamId": 234535453
+    }
+}

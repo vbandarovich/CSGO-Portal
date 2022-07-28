@@ -7,14 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  userId = "";
-
+  
   constructor(public authService: AuthGuardService) { 
   }
 
   ngOnInit() {
-    if (this.authService.isAuthorized) {
-      this.userId = this.authService.user?.id!;
-    }
   }
 }

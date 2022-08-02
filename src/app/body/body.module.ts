@@ -1,3 +1,4 @@
+import { ProfileStatComponent } from './profile/profile-stat/profile-stat.component';
 import { CommentsComponent } from './profile/comments/comments.component';
 import { LinkColComponent } from './profile/link-col/link-col.component';
 import { ProfileHeaderComponent } from './profile/profile-header/profile-header.component';
@@ -48,7 +49,7 @@ export function playerFactory() {
     HttpClientModule
   ],
   declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, SignupComponent, 
-    BestArtsComponent, ProfileComponent, ProfileHeaderComponent, LinkColComponent, CommentsComponent],
+    BestArtsComponent, ProfileComponent, ProfileHeaderComponent, LinkColComponent, CommentsComponent, ProfileStatComponent],
   exports: [BodyComponent]
 })
 export class BodyModule { }

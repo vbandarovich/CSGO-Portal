@@ -1,23 +1,19 @@
-<div class="d-flex justify-content-start bg-link-col" style="color: rgb(190, 187, 187);">
+<div class="d-flex justify-content-start bg-link-col">
   <div class="bg-transparent card mb-3">
-    <div class=" card-header">Active</div>
+    <div class="card-header">Active</div>
 
     <div class="card-body justify-content-center">
-      <div class="row">
-        <h5 class="col card-title" style="padding-right: 0;">Games</h5>
-        <h5 class="col card-title">12</h5>
-      </div>
+      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/games' style="padding-right: 0; color: rgb(190, 187, 187);">
+        <h5 class="col" style="padding-right: 0;">Games: 12</h5>
+      </a>
 
-      <div class="row">
-        <h5 class="col card-title" style="padding-right: 0;">Groups</h5>
-        <h5 class="col card-title">5</h5>
-      </div>
+      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/groups' style="padding-right: 0; color: rgb(190, 187, 187);">
+        <h5 class="col" style="padding-right: 0;">Groups: 5</h5>
+      </a>
 
-      <div class="row">
-        <h5 class="col card-title" style="padding-right: 0;">Friends</h5>
-        <h5 class="col card-title">9</h5>
-      </div>
+      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/friends' style="padding-right: 0; color: rgb(190, 187, 187);">
+        <h5 class="col" style="padding-right: 0;">Friends: 9</h5> 
+      </a>
     </div>
   </div>
 </div>
-

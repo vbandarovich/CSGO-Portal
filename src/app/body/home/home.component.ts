@@ -8,7 +8,7 @@ import { Title } from '@angular/platform-browser';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
-  sum = 6;
+  sum = 0;
   news = [1,2,3,4,5,6];
   throttle = 300;
   scrollDistance = 1;

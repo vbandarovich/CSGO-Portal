@@ -4,10 +4,45 @@
     backdrop-filter: blur(20px);
     padding: 10px;
     border-radius: 3px;
-    width: 368px;
+    width: 28%;
+    height: 55vmin;
     float: right;
     background-color: rgba(10, 14, 32, 0.8);
+    color: rgb(190, 187, 187);
     margin-top: 0px;
     overflow: hidden;
     padding-top: 16px;
+}
+
+@media (max-width: 991px) {
+    .bg-link-col {
+        background-color: #101214;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        padding: 10px;
+        border-radius: 3px;
+        width: 28%;
+        height: 75vmin;
+        float: right;
+        background-color: rgba(10, 14, 32, 0.8);
+        color: rgb(190, 187, 187);
+        margin-top: 0px;
+        overflow: hidden;
+        padding-top: 16px;
+    }
+}
+
+@media (max-width: 770px) {
+    .bg-link-col {
+        background-color: #101214;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        padding: 10px;
+        border-radius: 3px;
+        width: 85%;
+        background-color: rgba(10, 14, 32, 0.8);
+        margin: 0 7% 5%;
+        overflow: hidden;
+        padding-top: 16px;
+    }
 }

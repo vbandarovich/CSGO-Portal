@@ -1,3 +1,7 @@
+import { ProfileStatComponent } from './profile/profile-stat/profile-stat.component';
+import { CommentsComponent } from './profile/comments/comments.component';
+import { LinkColComponent } from './profile/link-col/link-col.component';
+import { ProfileHeaderComponent } from './profile/profile-header/profile-header.component';
 import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { BestArtsComponent } from './best-arts/best-arts.component';
@@ -44,7 +48,8 @@ export function playerFactory() {
     MdbFormsModule,
     HttpClientModule
   ],
-  declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, SignupComponent, BestArtsComponent, ProfileComponent],
+  declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, SignupComponent, 
+    BestArtsComponent, ProfileComponent, ProfileHeaderComponent, LinkColComponent, CommentsComponent, ProfileStatComponent],
   exports: [BodyComponent]
 })
 export class BodyModule { }

@@ -1,0 +1,26 @@
+.bg-stats {
+    background-color: #101214;
+    background-color: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(20px);
+    padding: 10px;
+    border-radius: 3px;
+    width: 68%;
+    background-color: rgba(10, 14, 32, 0.8);
+    margin-top: 0px;
+    overflow: hidden;
+    padding-top: 16px;
+}
+
+@media (max-width: 770px) {
+    .bg-stats {
+        background-color: #101214;
+        background-color: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(20px);
+        padding: 10px;
+        border-radius: 3px;
+        width: 95%;
+        background-color: rgba(10, 14, 32, 0.8);
+        overflow: hidden;
+        padding-top: 16px;
+    }
+}

@@ -6,10 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./comments.component.scss']
 })
 export class CommentsComponent implements OnInit {
+  comment = "";
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  sendComment() {
+    this.comment = "";
   }
 
 }

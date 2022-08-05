@@ -3,16 +3,39 @@
     <div class="card-header">Active</div>
 
     <div class="card-body justify-content-center">
-      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/games' style="padding-right: 0; color: rgb(190, 187, 187);">
+      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/icons'
+        style="padding-right: 0; color: rgb(190, 187, 187);">
+        <h5 class="col" style="padding-right: 0;">Icons: 3</h5>
+
+        <div class="d-flex justify-content-evenly" style="padding-left: 0;">
+          <img src="https://community.cloudflare.steamstatic.com/public/images/badges/01_community/community02_54.png"
+            width="54" height="54" />
+          <img src="https://community.cloudflare.steamstatic.com/public/images/badges/13_gamecollector/10_54.png?v=4"
+            width="54" height="54" />
+          <img src="https://community.cloudflare.steamstatic.com/public/images/badges/02_years/steamyears5_54.png"
+            width="54" height="54" />
+        </div>
+      </a>
+
+      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/games'
+        style="padding-right: 0; color: rgb(190, 187, 187);">
         <h5 class="col" style="padding-right: 0;">Games: 12</h5>
       </a>
 
-      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/groups' style="padding-right: 0; color: rgb(190, 187, 187);">
+      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/groups'
+        style="padding-right: 0; color: rgb(190, 187, 187);">
         <h5 class="col" style="padding-right: 0;">Groups: 5</h5>
+
+        <app-group-item></app-group-item>
       </a>
 
-      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/friends' style="padding-right: 0; color: rgb(190, 187, 187);">
-        <h5 class="col" style="padding-right: 0;">Friends: 9</h5> 
+      <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/friends'
+        style="padding-right: 0; color: rgb(190, 187, 187);">
+        <h5 class="col" style="padding-right: 0;">Friends: 9</h5>
+
+        <div class="d-flex justify-content-between">
+          <app-friend-item></app-friend-item>
+        </div>
       </a>
     </div>
   </div>

@@ -1,3 +1,5 @@
+import { FriendItemComponent } from './profile/link-col/friend-item/friend-item.component';
+import { GroupItemComponent } from './profile/link-col/group-item/group-item.component';
 import { ProfileStatComponent } from './profile/profile-stat/profile-stat.component';
 import { CommentsComponent } from './profile/comments/comments.component';
 import { LinkColComponent } from './profile/link-col/link-col.component';
@@ -49,7 +51,8 @@ export function playerFactory() {
     HttpClientModule
   ],
   declarations: [BodyComponent, HomeComponent, NotFoundComponent, SigninComponent, SignupComponent, 
-    BestArtsComponent, ProfileComponent, ProfileHeaderComponent, LinkColComponent, CommentsComponent, ProfileStatComponent],
+    BestArtsComponent, ProfileComponent, ProfileHeaderComponent, LinkColComponent, CommentsComponent, ProfileStatComponent, 
+    GroupItemComponent, FriendItemComponent],
   exports: [BodyComponent]
 })
 export class BodyModule { }

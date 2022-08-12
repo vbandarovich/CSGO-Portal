@@ -25,17 +25,13 @@
       <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/groups'
         style="padding-right: 0; color: rgb(190, 187, 187);">
         <h5 class="col" style="padding-right: 0;">Groups: 5</h5>
-
         <app-group-item></app-group-item>
       </a>
 
       <a class="row card-title" routerLink='/profile/{{authService.user?.id}}/friends'
         style="padding-right: 0; color: rgb(190, 187, 187);">
         <h5 class="col" style="padding-right: 0;">Friends: 9</h5>
-
-        <div class="d-flex justify-content-between">
-          <app-friend-item></app-friend-item>
-        </div>
+        <app-friend-item></app-friend-item>
       </a>
     </div>
   </div>
